@@ -132,7 +132,7 @@ async def lifespan(app: FastAPI):
     await Tortoise.close_connections()
 
 
-app = FastAPI(title="SMAV Control System", lifespan=lifespan)
+app = FastAPI(title="Bet Maker", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

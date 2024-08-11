@@ -5,7 +5,7 @@ logs_dir = "/storage/logs"
 os.makedirs(logs_dir, exist_ok=True)
 log_filename = os.path.join(logs_dir, "line_provider.log")
 
-level = "DEBUG"
+level = "INFO"
 
 
 logging_config = {
