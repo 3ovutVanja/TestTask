@@ -16,6 +16,8 @@ services:
       - MQ_USER=guest
       - MQ_PWD=guest
       - MQ_HOST=rabbitmq
+    ports:
+      - "8002:8002"
     depends_on:
       - db_line_provider
       - rabbitmq
