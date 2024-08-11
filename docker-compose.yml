@@ -17,7 +17,7 @@ services:
       - MQ_PWD=guest
       - MQ_HOST=rabbitmq
     ports:
-      - "8002:8002"
+      - "8001:8001"
     depends_on:
       - db_line_provider
       - rabbitmq
@@ -42,7 +42,7 @@ services:
       - MQ_HOST=rabbitmq
       - LP_HOST=line-provider
     ports:
-      - "8001:8001"
+      - "8002:8002"
     depends_on:
       - line-provider
       - db_bet_maker
@@ -70,8 +70,6 @@ services:
       MYSQL_DATABASE: line_provider_db
       MYSQL_USER: user_line
       MYSQL_PASSWORD: 12451245
-    ports:
-      - "3308:3306"
     volumes:
       - db_data_line:/var/lib/mysql
     networks:
@@ -93,8 +91,6 @@ services:
       MYSQL_DATABASE: bet_maker_db
       MYSQL_USER: user_bet
       MYSQL_PASSWORD: 12451245
-    ports:
-      - "3307:3306"
     volumes:
       - db_data_bet:/var/lib/mysql
     networks:
