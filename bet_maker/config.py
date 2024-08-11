@@ -16,3 +16,5 @@ db_port = os.getenv("DB_PORT", "3306")
 mq_user = os.getenv("MQ_USER", "guest")
 mq_pwd = os.getenv("MQ_PWD", "guest")
 mq_host = os.getenv("MQ_HOST", "127.0.0.1")
+
+lp_host = os.getenv("LP_HOST", "localhost")

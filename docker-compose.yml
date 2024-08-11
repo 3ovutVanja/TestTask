@@ -38,6 +38,7 @@ services:
       - MQ_USER=guest
       - MQ_PWD=guest
       - MQ_HOST=rabbitmq
+      - LP_HOST=line-provider
     depends_on:
       - line-provider
       - db_bet_maker

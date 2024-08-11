@@ -96,7 +96,7 @@ async def shutdown():
 @repeat_every(seconds=5)
 async def get_actual_events():
     try:
-        response = requests.get("http://localhost:8001/actual_events/")
+        response = requests.get(f"http://{config.lp_host}:8001/actual_events/")
         response.raise_for_status()
         events = response.json()
         current_events = await ActualEvents.all()
